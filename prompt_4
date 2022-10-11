@@ -1,0 +1,8 @@
+#!/bin/bash
+while read line
+do
+export dname=`echo $line | awk '{print $1}'`
+mkdir -p "$dname"
+export fname=`echo $line | awk '{print $2}'`
+mv "$fname" "$dname"
+done < file
