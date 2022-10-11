@@ -2,8 +2,8 @@
 
 echo "Enter a phrase: "
 read phrase
-no_words = $(echo $phrase | wc -w)
-no_spaces = $(tr -d -C ' ' <<< $phrase | wc -c)
+no_words=$(echo $phrase | wc -w)
+no_spaces=$(tr -d -C ' ' <<< $phrase | wc -c)
 
 echo "The number of words is $no_words"
 echo "The number of white space is $no_spaces"
