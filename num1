@@ -1,0 +1,9 @@
+#!/bin/bash
+# script that will print the strings “one”,” two”,” three”,” four”, 
+# and “five” on the screen with each appearing on a separate line
+#     - create a text file that has each of these on a separate line and the file name 
+#     - starts with today's date “yyyy-mm-dd-file.txt”- 
+# .   - Note Don’t add today’s date manually.
+# 
+
+printf "%s\n" "one" "two" "three" "four" "five" | tee $(date +%F)-file.txt

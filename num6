@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# read the names in the text file using shell 
+# 
+input="./file.txt"
+input_template="./template.txt"
+
+while IFS= read -r line; do
+    while IFS= read -r lines; do
+        echo "$lines" >> $line.txt
+    done < "$input_template"
+    sed "s/Recipeints_Name/$line/" "$line".txt >> "$line".txt
+done < "$input"

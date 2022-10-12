@@ -1,0 +1,16 @@
+#!/usr/bin/env bash 
+# a shell script that takes a path
+#       Conditions 
+#       - confirm if it is a directory or not
+#       - If it is a directory list all files in that directory,
+#       - If not ask the user to give the file path of a directory
+
+echo "Enter Path To Directory:"
+read user_path
+
+# Check validity
+if [ ! -d "$user_path" ]; then
+    echo "Enter A Valid Path:"
+else
+    ls "$user_path"
+fi

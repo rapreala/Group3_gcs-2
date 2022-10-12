@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#shell script that asks the user to type a phrase, 
+#Then tells the user the number of words in the phrase and the number of white spaces
+
+
+# ----------------------------------------------
+    # Tis is just an altenative of the word_and_space_counter file 
+# ----------------------------------------------
+
+
+# Asking the user to enter the phrase
+echo "Type A Phrase: "
+read user_input
+
+# Count word(s) & whitespace(s) in phrase
+words=$(echo $user_input | wc -w)
+spaces=$(expr length "$user_input" - length `echo "$user_input" | sed "s/ //g"`)
+
+# Output
+echo "The number of words is $words"
+echo "The number of white spaces is $spaces"

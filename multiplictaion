@@ -1,8 +1,11 @@
 #! /bin/bash
-echo "enter two numbers"
-read n1 
+echo "Enter two numbers"
+echo "----------------------------------"
+echo "Enter First Number: "
+read n1
+echo "Enter Second Number: "
 read n2
-echo "the product of $n1 and $n2 is $((n1 * n2))"
+echo "The product of $n1 and $n2 is $((n1 * n2))"
 
 
 
